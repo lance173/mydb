@@ -94,3 +94,7 @@ C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.csproj.CoreCompileInputs.cache
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.csproj.CopyComplete
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.exe
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.pdb
+C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.RegisterEmployee.resources
+C:\xampp\htdocs\mydb\myApp\myApp\bin\Debug\ftrSDKHelper12.dll
+C:\xampp\htdocs\mydb\myApp\myApp\bin\Debug\ftrSDKHelper12.pdb
+C:\xampp\htdocs\mydb\myApp\myApp\bin\Debug\ftrSDKHelper12.xml

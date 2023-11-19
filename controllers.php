@@ -19,14 +19,12 @@
          return (isset($rows)) ? $rows : NULL; 
      }        
 
-     $Allemployees = displayAllEmployees();
-
-     //------------------------------------------------------------------------------
+     //-------------------------------------------------------------------------------
 
      // Show the Attendance
      function displayAttendance(){
          $conn = myConnect();
-         $sql = "SELECT attendance.AttendanceID, attendance.EmployeeID, attendance.TimeIn, attendance.OutTime, employees.CompanyID, employees.ScreenName FROM attendance INNER JOIN employees on attendance.EmployeeID = employees.CompanyID";
+         $sql = "SELECT attendance.AttendanceID, attendance.EmployeeID, attendance.TimeIn, attendance.OutTime, employees.CompanyID, employees.ScreenName FROM attendance INNER JOIN employees on attendance.EmployeeID = employees.CompanyID ORDER BY TimeIN DESC";
          $result = mysqli_query($conn, $sql);
      
          while($row=mysqli_fetch_array($result)){
@@ -54,6 +52,8 @@
          $checkQuery = "SELECT EmployeeID, TimeIn FROM attendance WHERE EmployeeID = '$EmployeeID' AND DATE(TimeIn) = '$today'";
          $result = $conn->query($checkQuery);
         
+
+         
          //if employee hasn't timed in yet for today
          if($result->num_rows == 0 ){
             $sql2 = "INSERT INTO Attendance(TimeIn, EmployeeID) VALUES( NOW(), '$EmployeeID' ) " ;         
@@ -61,7 +61,7 @@
 
             if ($result2) {
                 $str = "Clocked in successfully!";
-                header("Location:employees.php?success-msg=".$str);
+                header("Location:employees.php?success-msg=".$str."&employeeID=".$EmployeeID);
             } else {
                 echo "Error: " . $conn->error;
             }       
@@ -71,14 +71,39 @@
             $result3 = mysqli_query($conn,$sql3);
 
             if ($result3) {
-                $str = "Clocked out successfully!";
-                header("Location:employees.php?success-msg=".$str);
+                $str = "Clocked out successfully!"; 
+                
+                header("Location:employees.php?success-msg=".$str."&employeeID=".$EmployeeID);
+
                 
             } else {
                 echo "Error: " . $conn->error;
             }     
          }
-         
+      
+     } 
 
-            
-     }        
+     //-------------------------------------------------------------------------------
+
+     //Display Timed Employee
+
+
+     function loadTimedEmployee(){
+        $id = $_GET['employeeID'];
+    
+        $conn = myConnect();
+        $sql = "SELECT * FROM employees WHERE CompanyID = '$id' LIMIT 1";
+    
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+
+        return $row;
+    
+        // echo json_encode([
+        // 'response' => true,
+        // 'data' => $row
+        // ]);
+    }
+
+
+

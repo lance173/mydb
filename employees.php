@@ -4,45 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employees</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="pre-custom.js"></script>
     <style>
         table, th, tr, td {
             border: 1px solid;
         }
         .clock {
-            font-size: 40px;
+            font-size: 50px;
         }
     </style>
-    <script>
-        function displayTime(){
-            var dateTime = new Date();
-            var hrs =  dateTime.getHours();
-            var min =  dateTime.getMinutes();
-            var sec =  dateTime.getSeconds();
-            var session =  document.getElementById('session');
-
-            if(hrs >= 12){
-                session.innerHTML = 'PM';
-            }else{
-                session.innerHTML ='AM';
-            }
-
-            // if(hrs > 12){
-            //     hrs = hrs - 12;
-            // }
-
-            document.getElementById('hours').innerHTML = hrs;
-            document.getElementById('minutes').innerHTML = min;
-            document.getElementById('seconds').innerHTML = sec;
-        }
-
-        setInterval(displayTime, 10) ;
-    </script>
 </head>
 
 <body>
     <?php
        require_once('controllers.php');
     ?>
+
+    <?php $Allemployees = displayAllEmployees(); ?>
 
     <div class="container">
         <div class="row m-5">
@@ -81,37 +59,14 @@
                 </div>                
 
                 <button class="btn btn-info py-2 px-4" data-bs-toggle="modal" data-bs-target="#InputTimeModal"> INPUT TIME</button>
-
-                <div class="modal fade" id="InputTimeModal" tabindex="-1" aria-labelledby="InputTimeModalLabel" aria-hidden="true">
-                    <form class="form-horizontal" method="POST" action="controllers.php">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="InputTimeModalLabel">Enter Your ID Number</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group row">
-                                    <label for="inputCompanyID" class="col-sm-4 col-form-label">Enter Company ID</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="inputID" id="inputID" placeholder="ID Number" style="width: 80%;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" name="InputTime" class="btn btn-primary">Enter</button>
-                            </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>                
+                               
+                <?php require_once('input-time-modal.php'); ?>               
 
             </div>
         </div>
 
         <div class="row m-5">
-            <div class="col-sm-10">
+            <div class="col-sm-10"> 
                 <h1>Attendance</h1>
                 <div>
 
@@ -155,4 +110,5 @@
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="post-custom.js"></script>
 </html>

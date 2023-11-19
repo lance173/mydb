@@ -35,39 +35,44 @@
             // 
             // txt_IDNo
             // 
-            this.txt_IDNo.Location = new System.Drawing.Point(196, 55);
+            this.txt_IDNo.Location = new System.Drawing.Point(261, 68);
+            this.txt_IDNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_IDNo.Name = "txt_IDNo";
-            this.txt_IDNo.Size = new System.Drawing.Size(243, 20);
+            this.txt_IDNo.Size = new System.Drawing.Size(323, 22);
             this.txt_IDNo.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 51);
+            this.label1.Location = new System.Drawing.Point(28, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 24);
+            this.label1.Size = new System.Drawing.Size(192, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter ID Number";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(288, 96);
+            this.button1.Location = new System.Drawing.Point(384, 118);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 30);
+            this.button1.Size = new System.Drawing.Size(201, 37);
             this.button1.TabIndex = 2;
             this.button1.Text = "Enter";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ConfirmUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 154);
+            this.ClientSize = new System.Drawing.Size(632, 190);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_IDNo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConfirmUser";
             this.Text = "ConfirmUser";
             this.ResumeLayout(false);
