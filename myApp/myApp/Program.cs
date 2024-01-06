@@ -16,8 +16,7 @@ namespace myApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Customer());
-            Application.Run(new Employees());
+            Application.Run(new InputTime());
         }
     }
 }

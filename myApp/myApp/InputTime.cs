@@ -30,6 +30,14 @@ namespace myApp
 
         }
 
- 
+        private void RegEmpBtn_Click(object sender, EventArgs e)
+        {
+            new RegisterEmployee().Show();
+        }
+
+        private void TimeButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

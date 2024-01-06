@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2023 at 10:48 AM
+-- Generation Time: Jan 06, 2024 at 10:22 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -93,18 +93,32 @@ CREATE TABLE `employees` (
   `ScreenName` varchar(50) NOT NULL,
   `ShiftStart` time NOT NULL,
   `ShiftEnd` time NOT NULL,
-  `Photo` text NOT NULL
+  `Photo` text NOT NULL,
+  `FPRegistered` enum('No','Yes') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employees`
 --
 
-INSERT INTO `employees` (`CompanyID`, `ScreenName`, `ShiftStart`, `ShiftEnd`, `Photo`) VALUES
-(1, 'George', '08:00:00', '17:00:00', 'img/george.png'),
-(2, 'Diane', '09:00:00', '18:00:00', 'img/diane.png'),
-(3, 'John', '15:00:00', '00:00:00', 'img/john.png'),
-(4, 'Jill', '10:00:00', '18:00:00', 'img/image-default.png');
+INSERT INTO `employees` (`CompanyID`, `ScreenName`, `ShiftStart`, `ShiftEnd`, `Photo`, `FPRegistered`) VALUES
+(1, 'George', '08:00:00', '17:00:00', 'img/george.png', 'No'),
+(2, 'Diane', '09:00:00', '18:00:00', 'img/diane.png', 'No'),
+(3, 'John', '15:00:00', '00:00:00', 'img/john.png', 'No'),
+(4, 'Jill', '10:00:00', '18:00:00', 'img/image-default.png', 'No');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fingerprints`
+--
+
+CREATE TABLE `fingerprints` (
+  `fpID` int(11) NOT NULL,
+  `RightIndex` text NOT NULL,
+  `LeftIndex` text NOT NULL,
+  `EmpID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -130,6 +144,12 @@ ALTER TABLE `employees`
   ADD PRIMARY KEY (`CompanyID`);
 
 --
+-- Indexes for table `fingerprints`
+--
+ALTER TABLE `fingerprints`
+  ADD PRIMARY KEY (`fpID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -144,6 +164,12 @@ ALTER TABLE `attendance`
 --
 ALTER TABLE `customer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `fingerprints`
+--
+ALTER TABLE `fingerprints`
+  MODIFY `fpID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
