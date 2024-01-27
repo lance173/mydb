@@ -15,7 +15,7 @@ namespace myApp
 
         private void AddEdit_Load(object sender, EventArgs e)
         {
-            ((Customer)Application.OpenForms["Customer"]).Enabled = false;   
+            ((Customers)Application.OpenForms["Customer"]).Enabled = false;   
 
             switch (lbl_Title.Text) 
             {
@@ -25,11 +25,11 @@ namespace myApp
 
                 case "Update Customer":
                     button1.Text = "Update";
-                    id = Customer.id;
-                    txt_Firstname.Text = Customer.first_name;
-                    txt_Lastname.Text = Customer.last_name;
-                    txt_Address.Text = Customer.home_address;
-                    txt_Contact.Text = Customer.contact_number;
+                    id = Customers.id;
+                    txt_Firstname.Text = Customers.first_name;
+                    txt_Lastname.Text = Customers.last_name;
+                    txt_Address.Text = Customers.home_address;
+                    txt_Contact.Text = Customers.contact_number;
 
                     break;
                 
@@ -38,7 +38,7 @@ namespace myApp
 
         private void AddEdit_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ((Customer)Application.OpenForms["Customer"]).Enabled = true;
+            ((Customers)Application.OpenForms["Customer"]).Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace myApp
                         mysql.Query($"update customer set first_name='{txt_Firstname.Text}',last_name='{txt_Lastname.Text}',home_address='{txt_Address.Text}',contact_number='{txt_Contact.Text}' where id='{id}'");
                         break;
                 }
-                ((Customer)Application.OpenForms["Customer"]).Disp();
+                ((Customers)Application.OpenForms["Customer"]).Disp();
             }
             catch (Exception ex)
             {

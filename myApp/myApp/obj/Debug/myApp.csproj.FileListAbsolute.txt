@@ -83,9 +83,7 @@ C:\xampp\htdocs\mydb\myApp\myApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.csproj.AssemblyReference.cache
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.AddEdit.resources
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.ConfirmUser.resources
-C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.Customer.resources
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.Employees.resources
-C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.InputTime.resources
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.MainForm.resources
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.MySQL_Connect.resources
 C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.Properties.Resources.resources
@@ -98,3 +96,7 @@ C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.RegisterEmployee.resources
 C:\xampp\htdocs\mydb\myApp\myApp\bin\Debug\ftrSDKHelper12.dll
 C:\xampp\htdocs\mydb\myApp\myApp\bin\Debug\ftrSDKHelper12.pdb
 C:\xampp\htdocs\mydb\myApp\myApp\bin\Debug\ftrSDKHelper12.xml
+C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.Customers.resources
+C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.ManualTime.resources
+C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.Verification.resources
+C:\xampp\htdocs\mydb\myApp\myApp\obj\Debug\myApp.TimeScreen.resources

@@ -16,7 +16,9 @@ namespace myApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InputTime());
+            Application.Run(new TimeScreen());
+            //Console.WriteLine($"Working Directory: {Environment.CurrentDirectory}");
+
         }
     }
 }

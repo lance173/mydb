@@ -110,11 +110,11 @@
     <Compile Include="ConfirmUser.Designer.cs">
       <DependentUpon>ConfirmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="Customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees.cs">
       <SubType>Form</SubType>
@@ -122,11 +122,23 @@
     <Compile Include="Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
-    <Compile Include="InputTime.cs">
+    <Compile Include="ManualTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InputTime.Designer.cs">
-      <DependentUpon>InputTime.cs</DependentUpon>
+    <Compile Include="ManualTime.Designer.cs">
+      <DependentUpon>ManualTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verification.Designer.cs">
+      <DependentUpon>Verification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeScreen.Designer.cs">
+      <DependentUpon>TimeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="mysql.cs" />
     <Compile Include="MainForm.cs">
@@ -155,14 +167,20 @@
     <EmbeddedResource Include="ConfirmUser.resx">
       <DependentUpon>ConfirmUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InputTime.resx">
-      <DependentUpon>InputTime.cs</DependentUpon>
+    <EmbeddedResource Include="ManualTime.resx">
+      <DependentUpon>ManualTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification.resx">
+      <DependentUpon>Verification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeScreen.resx">
+      <DependentUpon>TimeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
